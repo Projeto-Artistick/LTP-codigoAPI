@@ -23,3 +23,9 @@ def update(id):
     if atualizado:
         return jsonify(atualizado)
     return jsonify({"erro": "Histórico não encontrado"}), 404
+@historico_bp.route("/<int:id>", methods=["DELETE"])
+def delete(id):
+    sucesso = historico_service.deletar_historico(id)
+    if sucesso:
+        return "", 204
+    return jsonify({"erro": "Histórico não encontrado"}), 404

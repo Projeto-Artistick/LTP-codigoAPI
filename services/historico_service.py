@@ -20,3 +20,10 @@ def atualizar_historico(id, dados):
             h.salva = dados.get("salva", h.salva)
             return vars(h)
     return None
+def deletar_historico(id):
+    global historicos
+    for h in historicos:
+        if h.id == id:
+            historicos = [x for x in historicos if x.id != id]
+            return True
+    return False

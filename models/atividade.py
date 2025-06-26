@@ -5,5 +5,4 @@ class Atividade:
         self.descricao = descricao
         self.categoria = categoria
         self.pontos = pontos
-        self.guardar = False
         self.realizada = False
