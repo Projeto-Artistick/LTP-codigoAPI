@@ -9,7 +9,7 @@ collection:
     meta:
       id: fld_9b7a6e36e20e46cbba2ac7871f09620d
       created: 1750897742964
-      modified: 1750897742964
+      modified: 1750973969654
       sortKey: -1750897742964
     children:
       - url: "{{ _[''].base_url }}/atividades"
@@ -37,7 +37,7 @@ collection:
         meta:
           id: req_d0542143670b4ab29df77a4a76ac9015
           created: 1750897488733
-          modified: 1750897755750
+          modified: 1750975531458
           isPrivate: false
           sortKey: -1750897752266
         method: POST
@@ -45,7 +45,6 @@ collection:
           mimeType: application/json
           text: |
             {
-              "id": 1,
               "titulo": "Caminhada no parque",
               "descricao": "30 minutos de caminhada leve",
               "categoria": "Exercício",
@@ -84,12 +83,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _[''].base_url }}/atividades/{% hash 'sha256', 'hex', '' %}"
+      - url: "{{ _[''].base_url }}/atividades/1"
         name: Atualizar Atividades
         meta:
           id: req_23905ece2a8749e9a639f2e75cb1b2cd
           created: 1750897860605
-          modified: 1750906554299
+          modified: 1750977649148
           isPrivate: false
           sortKey: -1750897752466
         method: PUT
@@ -188,16 +187,15 @@ collection:
         meta:
           id: req_c244eb6008f04b5eb4e9133fa96a504f
           created: 1750898520616
-          modified: 1750898687902
+          modified: 1750967592339
           isPrivate: false
           sortKey: -1750898402204
         method: POST
         body:
           mimeType: application/json
           text: |-
-            { 
-             "id": 1, 
-             "nome": "João", 
+            {  
+             "nome": "ana", 
              "email": "joao@email.com", 
              "foto": "url" 
             }
@@ -219,13 +217,13 @@ collection:
         meta:
           id: req_25443032c3134a5fb5ba327f916afcde
           created: 1750898778154
-          modified: 1750898882306
+          modified: 1750967619988
           isPrivate: false
           sortKey: -1750898402304
         method: PUT
         body:
           mimeType: application/json
-          text: '{ "nome": "Novo nome" }'
+          text: '{ "nome": "juliana" }'
         headers:
           - name: Content-Type
             value: application/json
@@ -264,7 +262,7 @@ collection:
         meta:
           id: req_9e319931d0c24813a781e3d4c214a01d
           created: 1750905951804
-          modified: 1750906011053
+          modified: 1750977770845
           isPrivate: false
           sortKey: -1750898402404
         method: DELETE
@@ -306,12 +304,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _[''].base_url }}/ historico/1"
+      - url: "{{ _[''].base_url }}/historico/1"
         name: Listar historico usuario
         meta:
           id: req_7524d1fb273a48ffb0a676810bddf1d3
           created: 1750899133556
-          modified: 1750899227022
+          modified: 1750977726913
           isPrivate: false
           sortKey: -1750899129200
         method: GET
@@ -331,17 +329,16 @@ collection:
         meta:
           id: req_b1695a6b06f44126bff07cf39e6a1bd6
           created: 1750899274368
-          modified: 1750899365308
+          modified: 1750977495206
           isPrivate: false
-          sortKey: -1750899129300
+          sortKey: -1750899129250
         method: POST
         body:
           mimeType: application/json
           text: |-
             {
-            	"id": 1,
             	"usuario_id": 1,
-            	"atividade_id": 2,
+            	"atividade_id": 1,
             	"feita": true,
             	"salva": false 
             }
@@ -363,7 +360,7 @@ collection:
         meta:
           id: req_1f46b54bfed24511b97a2509b7af19bd
           created: 1750899380683
-          modified: 1750899437884
+          modified: 1750967744959
           isPrivate: false
           sortKey: -1750899129400
         method: PUT
