@@ -33,3 +33,10 @@ def get_score(id):
     if pontuacao:
         return jsonify(pontuacao)
     return jsonify({"erro": "Usuário não encontrado"}), 404
+
+@usuario_bp.route("/<int:id>", methods=["DELETE"])
+def delete_usuario(id):
+    sucesso = usuario_service.deletar_usuario(id)
+    if sucesso:
+        return "", 204
+    return jsonify({"erro": "Usuário não encontrado"}), 404

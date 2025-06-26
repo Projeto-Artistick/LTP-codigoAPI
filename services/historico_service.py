@@ -2,6 +2,14 @@ from models.historico import HistoricoAtividade
 
 historicos = []
 
+contador_historico_id = 0
+
+def gerar_historico_id():
+    global contador_historico_id
+    contador_historico_id += 1
+    return contador_historico_id
+
+
 def listar_historico():
     return [vars(h) for h in historicos]
 
@@ -9,7 +17,7 @@ def listar_por_usuario(usuario_id):
     return [vars(h) for h in historicos if h.usuario_id == usuario_id]
 
 def registrar_atividade(dados):
-    novo = HistoricoAtividade(**dados)
+    novo = HistoricoAtividade(gerar_historico_id(), **dados)
     historicos.append(novo)
     return vars(novo)
 

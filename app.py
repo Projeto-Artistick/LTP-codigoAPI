@@ -6,12 +6,10 @@ from utils.error_handlers import register_error_handlers
 
 app = Flask(__name__)
 
-# Registrando os blueprints
 app.register_blueprint(atividade_bp)
 app.register_blueprint(usuario_bp)
 app.register_blueprint(historico_bp)
 
-# Registrando handlers de erro personalizados
 register_error_handlers(app)
 
 if __name__ == '__main__':
